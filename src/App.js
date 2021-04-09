@@ -1,24 +1,63 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import AddFood from './Components/AddFood/AddFood';
+import Home from './Components/Home/Home';
+import Breakfast from './Components/Breakfast/Breakfast';
+import Lunch from './Components/Lunch/Lunch';
+import Dinner from './Components/Dinner/Dinner';
+import Header from './Components/Header/Header';
+import BreakDetail from './Components/BreakDetail/BreakDetail';
+import LDetail from './Components/LDetail/LDetail';
+import DDetail from './Components/DDetail/DDetail';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    <Router>
+      
+      <div>
+      <Header></Header>
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/addfood">
+            <AddFood></AddFood>
+          </Route>
+          
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route  path="/home">
+            <Home />
+          </Route>
+           <Route path="/breakfast">
+            <Breakfast />
+          </Route>
+        {/*  
+          <Route path="/:id">
+            <BreakDetail />
+          </Route>
+          <Route path="/lunch">
+            <Lunch />
+          </Route>
+          <Route path="/:id">
+            <LDetail />
+          </Route>
+          <Route path="/dinner">
+            <Dinner />
+          </Route>
+          <Route path="/:id">
+            <DDetail />
+          </Route> */}
+          
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
