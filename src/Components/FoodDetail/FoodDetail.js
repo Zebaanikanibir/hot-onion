@@ -16,7 +16,7 @@ const FoodDetail = () => {
     }, [id])
 
     return (
-        <div className="App">
+        <div className="App row container-fluid">
             {
                food.length === 0 && (
                 <div id="loading" className="App mt-5">
@@ -24,7 +24,7 @@ const FoodDetail = () => {
                 </div>
                )
            }
-               <div>
+               <div className="col-md-4">
                <img src={food.imageURL} alt=""/>
                 <Card>
                     <Card.Body>
