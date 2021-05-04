@@ -1,0 +1,12 @@
+#text p{
+    color: black;
+    font-weight: 700;
+}
+#foodName{
+    color: darkgreen;
+    font-size: 30px;
+}
+img{
+    width: 30%;
+    margin-top: 20px;
+}

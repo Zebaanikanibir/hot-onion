@@ -3,20 +3,28 @@ import { useEffect } from 'react';
 import LunchDetail from '../LunchDetail/LunchDetail';
 import {Link} from "react-router-dom";
 const Lunch = () => {
-    const [lunch, setLunch] = useState([]);
+    const [lunch, setLunch] = useState([])
+    // console.log(foods)
     useEffect(() => {
 
-    fetch('http://localhost:5001/lunch')
+    fetch('https://cryptic-hollows-46319.herokuapp.com/food')
     .then(res =>res.json())
-    .then(data => setLunch(data))
-  
+    .then(data =>{
+        // setFoods(data)
+        const lunch = data.filter(food => food.type === 'lunch')
+        setLunch(lunch)
+        console.log(lunch)
+    } 
+    )
+
+
     },[])
     return (
         <div className="mt-5">
                <div className="link3">
             <Link id="link1" to="/breakfast">Breakfast</Link>
-            <Link id="link2" to="/lunch">Dinner</Link>
-            <Link  id="link3" to="/dinner">Lunch</Link>
+            <Link id="link2" to="/lunch">Lunch</Link>
+            <Link  id="link3" to="/lunch">Dinner</Link>
             </div>
             
 

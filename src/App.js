@@ -12,9 +12,7 @@ import Breakfast from './Components/Breakfast/Breakfast';
 import Lunch from './Components/Lunch/Lunch';
 import Dinner from './Components/Dinner/Dinner';
 import Header from './Components/Header/Header';
-import BreakDetail from './Components/BreakDetail/BreakDetail';
-import LDetail from './Components/LDetail/LDetail';
-import DDetail from './Components/DDetail/DDetail';
+import FoodDetail from './Components/FoodDetail/FoodDetail';
 function App() {
   return (
   
@@ -38,22 +36,19 @@ function App() {
            <Route path="/breakfast">
             <Breakfast />
           </Route>
-        {/*  
-          <Route path="/:id">
-            <BreakDetail />
-          </Route>
+         
+         
           <Route path="/lunch">
             <Lunch />
           </Route>
-          <Route path="/:id">
-            <LDetail />
-          </Route>
+          
           <Route path="/dinner">
             <Dinner />
           </Route>
-          <Route path="/:id">
-            <DDetail />
-          </Route> */}
+          <Route path="/food/:id">
+            <FoodDetail></FoodDetail>
+          </Route>
+          
           
         </Switch>
       </div>

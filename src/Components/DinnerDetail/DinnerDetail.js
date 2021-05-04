@@ -5,13 +5,13 @@ const DinnerDetail = (props) => {
     const {name,imageURL, _id} = props.dn
     const history = useHistory()
     const handleAddFood = (id) =>{
-        history.push(`${id}`)
+        history.push(`/food${id}`)
    }
     return (
         <div className="box">
             <div>
             <img className="image" src={imageURL}alt=""/>
-            <Link to={"/"+_id} onClick={()=>handleAddFood(_id)}className="foodName">{name}</Link>
+            <Link to={"/food/"+_id} onClick={()=>handleAddFood(_id)}className="foodName"><h5>{name}</h5></Link>
             </div>
         </div>
     );
