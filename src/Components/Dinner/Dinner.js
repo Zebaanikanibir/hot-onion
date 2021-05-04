@@ -27,6 +27,13 @@ const Dinner = () => {
             <Link  id="link3" to="/dinner">Lunch</Link>
             </div>
 
+            {
+              dinner.length === 0 && (
+                <div id="loading" className="App mt-5">
+                <Spinner animation="border" variant="primary" />
+                </div>
+               )
+           }
         <div className="display mt-5">
         {
 

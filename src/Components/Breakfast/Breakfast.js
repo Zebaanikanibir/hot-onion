@@ -33,7 +33,13 @@ const Breakfast = () => {
             <Link  id="link3" to="/dinner">Dinner</Link>
             </div>
             
-
+            {
+              breakfast.length === 0 && (
+                <div id="loading" className="App mt-5">
+                <Spinner animation="border" variant="primary" />
+                </div>
+               )
+           }
         <div className="display mt-5">
         {
 

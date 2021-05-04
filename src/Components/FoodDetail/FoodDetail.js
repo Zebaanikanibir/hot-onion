@@ -17,6 +17,14 @@ const FoodDetail = () => {
 
     return (
         <div className="App">
+            {
+               food.length === 0 && (
+                <div id="loading" className="App mt-5">
+                <Spinner animation="border" variant="primary" />
+                </div>
+               )
+           }
+               <div>
                <img src={food.imageURL} alt=""/>
                 <Card>
                     <Card.Body>
@@ -28,6 +36,7 @@ const FoodDetail = () => {
                     </Card.Body>
                 </Card>
 
+               </div>
 
         </div>
     );

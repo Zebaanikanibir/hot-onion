@@ -24,12 +24,6 @@ const Header = () => {
 
 
             <div>
-                <InputGroup id="input">
-                    <InputGroup.Prepend>
-                        <Button variant="dark">Search</Button>
-                    </InputGroup.Prepend>
-                    <FormControl  type="text" aria-label="With textarea" />
-                </InputGroup>
 
                 <p id="Name">WELCOME...</p>
                 <p>TO OUR FOOD CLUB.HERE WE SERVE FRESH FOOD.AND YOU CAN ORDER YOUR DESERVE FOOD.</p>
