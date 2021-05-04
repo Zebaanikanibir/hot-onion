@@ -24,7 +24,7 @@ const FoodDetail = () => {
                 </div>
                )
            }
-               <div className="col-md-4">
+               <div className="col-md-12">
                <img src={food.imageURL} alt=""/>
                 <Card>
                     <Card.Body>
