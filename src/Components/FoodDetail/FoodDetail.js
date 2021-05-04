@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { Card, Container, Form, Button } from 'react-bootstrap';
+import { Card, Container, Form, Button, Spinner } from 'react-bootstrap';
 import './FoodDetail.css';
 const FoodDetail = () => {
     const { id } = useParams()
@@ -20,7 +20,7 @@ const FoodDetail = () => {
             {
                food.length === 0 && (
                 <div id="loading" className="App mt-5">
-                <Spinner animation="border" variant="primary" />
+                <Spinner animation="grow" variant="success" />
                 </div>
                )
            }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import LunchDetail from '../LunchDetail/LunchDetail';
 import {Link} from "react-router-dom";
+import { Spinner } from 'react-bootstrap';
 const Lunch = () => {
     const [lunch, setLunch] = useState([])
     // console.log(foods)
@@ -24,12 +25,12 @@ const Lunch = () => {
                <div className="link3">
             <Link id="link1" to="/breakfast">Breakfast</Link>
             <Link id="link2" to="/lunch">Lunch</Link>
-            <Link  id="link3" to="/lunch">Dinner</Link>
+            <Link  id="link3" to="/dinner">Dinner</Link>
             </div>
             {
               lunch.length === 0 && (
                 <div id="loading" className="App mt-5">
-                <Spinner animation="border" variant="primary" />
+               <Spinner animation="grow" variant="success" />
                 </div>
                )
            }

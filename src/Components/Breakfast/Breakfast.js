@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import BreakfastDetail from '../BreakfastDetail/BreakfastDetail';
 import {Link} from "react-router-dom";
+import { Spinner } from 'react-bootstrap';
 import './Breakfast.css';
 const Breakfast = () => {
     // const [foods, setFoods] = useState([]);
@@ -36,7 +37,7 @@ const Breakfast = () => {
             {
               breakfast.length === 0 && (
                 <div id="loading" className="App mt-5">
-                <Spinner animation="border" variant="primary" />
+                <Spinner animation="grow" variant="success" />
                 </div>
                )
            }
