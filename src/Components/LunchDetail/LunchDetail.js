@@ -9,7 +9,7 @@ const LunchDetail = (props) => {
         console.log(id)
    }
     return (
-        <div className="box col-md-4 col-lg-4">
+        <div className="box col-md-4">
             <div>
             <img className="image" src={imageURL}alt=""/>
             <Link to={"/food/"+_id}  onClick={()=>handleAddFood(_id)}className="foodName">
