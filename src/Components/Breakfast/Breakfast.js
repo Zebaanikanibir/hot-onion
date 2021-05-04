@@ -41,7 +41,7 @@ const Breakfast = () => {
                 </div>
                )
            }
-        <div className="display mt-5">
+        <div className="display mt-5 row container-fluid">
         {
 
         breakfast.map(br => <BreakfastDetail br={br}></BreakfastDetail>)
